@@ -1,0 +1,3 @@
+scp ~/.ssh/id_ed25519.pub " USERNAME@seis.bris.ac.uk :~/.ssh/" 
+
+scp demo.cpp "ex1234@filehosts.r.us :~/coding/"
