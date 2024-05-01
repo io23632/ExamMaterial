@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    /* Set the calculator to be in the middle: 
+    - display
+    - justify-content
+    - align-items
+    - height 100vh
+    */
+    display: flex; /*Set the dispalay to be flexible */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*height is set to 100 vh (100% of the viewport height)*/
+
+}
+
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+}
+
+#calculator {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    /*overflow text will be hidden*/
+    overflow: hidden;
+}
+
+/*Set the layout of the keys, select the keys via #keys*/
+#keys {
+    /*How do you set the buttons to be in a grid? Set the dispaly to
+    be a grid*/
+    display: grid; /*This will set all the buttons in one line, so set the columns and rows*/
+    
+    /* Here, we are setting the gird to have 4 coulumns, with 1fr, (using a CSS built in function called repeat) (
+        fractional unit, this will set keys to take up equal amounts of space */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Gap between the rows*/
+    padding: 25px; /*Padding around the keys*/
+}
+
+button {
+    /*Set the widht to be 100 px*/
+    width: 100px;
+    height: 100px;
+    /*Make the buttons into circles by seeting border radius to be 50px*/
+    border-radius: 50px;
+    border: none;
+    /*hsl is hue, saturation and lightness*/
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    /* pixels are absolute units, when the font is set to 
+    24 pixels it will stay that size, whereas rem is relative units 
+    based on the documents font size. The default is 16 px == 1.5 rem*/
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+button:active {
+    background-color: hsl(0, 0%, 45%);
+}
+
+.operator {
+
+    background-color: hsl(35, 100%, 55%)
+    
+}
+.operator:hover{
+    background-color: hsl(35, 100%, 65%)
+}
+
+.operator:active {
+    background-color: hsl(35, 100%, 75%)
+}
+
