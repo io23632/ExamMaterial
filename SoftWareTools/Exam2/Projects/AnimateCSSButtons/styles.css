@@ -1,0 +1,58 @@
+html {
+    overscroll-beahavior: contain;
+  }
+  
+  .grid {
+    --col: 9.5rem;
+    --row: 8rem;
+    --gap: 2rem;
+  
+    display: grid;
+    grid-template-columns: repeat(3, var(--col));
+    grid-template-rows: repeat(4, var(--row));
+    grid-gap: var(--gap);
+  }
+  
+  .grid--full {
+    --col: 30%;
+    --row: 4rem;
+    --gap: 1rem;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .grid {
+      transition: all 1s;
+    }
+  }
+  
+  button {
+    background-color: #123456;
+    color: #ffffff;
+    margin: 2rem 0;
+    padding: 1.4rem;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    background-color: green;
+    border: none;
+    padding: 1.2rem;
+    border-radius: 5px;
+    color: #ffffff;
+
+
+  }
+  
+  button:focus-visible {
+    outline: 4px solid #123456;
+    outline-offset: 4px;
+  }
+  
+  dt {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
