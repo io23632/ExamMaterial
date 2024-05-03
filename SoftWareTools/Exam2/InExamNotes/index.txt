@@ -1,0 +1,8 @@
+<p>
+  Click
+  <a href="www.example.com">here<a />
+  for more information.
+<p>
+
+var x;
+console.log(typeof(x));
